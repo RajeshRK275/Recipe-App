@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import styles from "../Styles/search.module.css";
 
-export default function Search() {
+export default function Search({ foodData, setFoodData }) {
   const [query, setQuery] = useState("pizza");
 
   useEffect(() => {
@@ -11,6 +11,7 @@ export default function Search() {
       );
       const data = await res.json();
       console.log(data.results);
+      setFoodData(data.results);
     }
     fetchFood();
   }, [query]);
