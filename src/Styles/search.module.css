@@ -1,8 +1,16 @@
-.searchBar{
+.searchContainer{
     width: 300px;
-    border: none;
-    margin: 0 auto;
+    margin: 20px auto;
     display: block;
-    margin-top: 2em;
-    background-color: aqua;
+    position: relative;
+}
+
+.searchInput{
+    border: none;
+    border-bottom: 1px solid #e3e4dc;
+    padding: 10px 20px;
+    width: 100%;
+    outline: none;
+    font-size: 16px;
+    color: #393e46;
 }

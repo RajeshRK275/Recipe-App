@@ -15,14 +15,15 @@ export default function Search({ foodData, setFoodData }) {
     }
     fetchFood();
   }, [query]);
+
   return (
-    <div className={styles.searchBar}>
+    <div className={styles.searchContainer}>
       <input
+        className={styles.searchInput}
         type="text"
         value={query}
         onChange={(e) => setQuery(e.target.value)}
       />
-      <button type="submit">Search</button>
     </div>
   );
 }
